@@ -35,6 +35,7 @@
             this.passwordL = new System.Windows.Forms.Label();
             this.loginL = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.visiblePasswordCB = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // regBtn
@@ -51,7 +52,8 @@
             // 
             this.passwordRegTb.Location = new System.Drawing.Point(160, 94);
             this.passwordRegTb.Name = "passwordRegTb";
-            this.passwordRegTb.Size = new System.Drawing.Size(143, 20);
+            this.passwordRegTb.PasswordChar = '*';
+            this.passwordRegTb.Size = new System.Drawing.Size(123, 20);
             this.passwordRegTb.TabIndex = 7;
             // 
             // loginRegTb
@@ -101,11 +103,22 @@
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // visiblePasswordCB
+            // 
+            this.visiblePasswordCB.AutoSize = true;
+            this.visiblePasswordCB.Location = new System.Drawing.Point(289, 97);
+            this.visiblePasswordCB.Name = "visiblePasswordCB";
+            this.visiblePasswordCB.Size = new System.Drawing.Size(15, 14);
+            this.visiblePasswordCB.TabIndex = 13;
+            this.visiblePasswordCB.UseVisualStyleBackColor = true;
+            this.visiblePasswordCB.CheckedChanged += new System.EventHandler(this.visiblePasswordCB_CheckedChanged);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 189);
+            this.Controls.Add(this.visiblePasswordCB);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.passwordL);
             this.Controls.Add(this.loginL);
@@ -129,5 +142,6 @@
         private System.Windows.Forms.Label passwordL;
         private System.Windows.Forms.Label loginL;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.CheckBox visiblePasswordCB;
     }
 }

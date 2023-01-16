@@ -22,7 +22,7 @@ namespace CurrencyBank.UI
         private void SignBtn_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
-            User.Avtorization(this, form, LoginSignTb.Text, PasswordSignTb.Text).GetAwaiter();
+            User.Avtorization(this, form, LoginSignTb.Text, passwordSignTb.Text).GetAwaiter();
         }
 
         private void Avtorization_Load(object sender, EventArgs e)
@@ -45,6 +45,11 @@ namespace CurrencyBank.UI
             Registration registration = new Registration();
             registration.Show();
             this.Hide();
+        }
+
+        private void visiblePasswordCB_CheckedChanged(object sender, EventArgs e)
+        {
+            Password.VisiblePassword(visiblePasswordCB, passwordSignTb);
         }
     }
 }

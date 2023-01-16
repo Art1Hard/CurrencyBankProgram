@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Password.cs" />
     <Compile Include="Logic\User.cs" />
     <Compile Include="Logic\DataBase.cs" />
     <Compile Include="UI\Avtorization.cs">

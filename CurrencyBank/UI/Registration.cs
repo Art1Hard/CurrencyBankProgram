@@ -25,5 +25,10 @@ namespace CurrencyBank.UI
             this.Close();
             Avtorization.Show();
         }
+
+        private void visiblePasswordCB_CheckedChanged(object sender, EventArgs e)
+        {
+            Password.VisiblePassword(visiblePasswordCB, passwordRegTb);
+        }
     }
 }

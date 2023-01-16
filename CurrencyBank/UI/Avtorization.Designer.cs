@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.LoginSignTb = new System.Windows.Forms.TextBox();
-            this.PasswordSignTb = new System.Windows.Forms.TextBox();
+            this.passwordSignTb = new System.Windows.Forms.TextBox();
             this.SignBtn = new System.Windows.Forms.Button();
             this.titleAvtL = new System.Windows.Forms.Label();
             this.loginL = new System.Windows.Forms.Label();
             this.passwordL = new System.Windows.Forms.Label();
             this.RegL = new System.Windows.Forms.Label();
+            this.visiblePasswordCB = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // LoginSignTb
@@ -45,12 +46,13 @@
             this.LoginSignTb.Size = new System.Drawing.Size(184, 20);
             this.LoginSignTb.TabIndex = 0;
             // 
-            // PasswordSignTb
+            // passwordSignTb
             // 
-            this.PasswordSignTb.Location = new System.Drawing.Point(154, 102);
-            this.PasswordSignTb.Name = "PasswordSignTb";
-            this.PasswordSignTb.Size = new System.Drawing.Size(184, 20);
-            this.PasswordSignTb.TabIndex = 1;
+            this.passwordSignTb.Location = new System.Drawing.Point(154, 102);
+            this.passwordSignTb.Name = "passwordSignTb";
+            this.passwordSignTb.PasswordChar = '*';
+            this.passwordSignTb.Size = new System.Drawing.Size(160, 20);
+            this.passwordSignTb.TabIndex = 1;
             // 
             // SignBtn
             // 
@@ -105,17 +107,28 @@
             this.RegL.MouseLeave += new System.EventHandler(this.RegL_MouseLeave);
             this.RegL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegL_MouseMove);
             // 
+            // visiblePasswordCB
+            // 
+            this.visiblePasswordCB.AutoSize = true;
+            this.visiblePasswordCB.Location = new System.Drawing.Point(323, 105);
+            this.visiblePasswordCB.Name = "visiblePasswordCB";
+            this.visiblePasswordCB.Size = new System.Drawing.Size(15, 14);
+            this.visiblePasswordCB.TabIndex = 14;
+            this.visiblePasswordCB.UseVisualStyleBackColor = true;
+            this.visiblePasswordCB.CheckedChanged += new System.EventHandler(this.visiblePasswordCB_CheckedChanged);
+            // 
             // Avtorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 218);
+            this.Controls.Add(this.visiblePasswordCB);
             this.Controls.Add(this.RegL);
             this.Controls.Add(this.passwordL);
             this.Controls.Add(this.loginL);
             this.Controls.Add(this.titleAvtL);
             this.Controls.Add(this.SignBtn);
-            this.Controls.Add(this.PasswordSignTb);
+            this.Controls.Add(this.passwordSignTb);
             this.Controls.Add(this.LoginSignTb);
             this.Name = "Avtorization";
             this.Text = "Авторизация";
@@ -128,12 +141,13 @@
         #endregion
 
         private System.Windows.Forms.TextBox LoginSignTb;
-        private System.Windows.Forms.TextBox PasswordSignTb;
+        private System.Windows.Forms.TextBox passwordSignTb;
         private System.Windows.Forms.Button SignBtn;
         private System.Windows.Forms.Label titleAvtL;
         private System.Windows.Forms.Label loginL;
         private System.Windows.Forms.Label passwordL;
         private System.Windows.Forms.Label RegL;
+        private System.Windows.Forms.CheckBox visiblePasswordCB;
     }
 }
 
