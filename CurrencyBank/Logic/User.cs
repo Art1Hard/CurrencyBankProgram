@@ -10,11 +10,11 @@ namespace CurrencyBank.Logic
     {
 
         // метод авторизации пользователя
-        public static async Task Avtorization(Form @this, Form open, string login, string password)
+        public static void Avtorization(Form @this, Form open, string login, string password)
         {
             using (SqlConnection connection = new SqlConnection(DataBase.ConnectionString))
             {
-                await connection.OpenAsync();
+                connection.Open();
                 DataBase dataBase = new DataBase();
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable table = new DataTable();
@@ -38,11 +38,11 @@ namespace CurrencyBank.Logic
         }
 
         // метод регистрации пользователя
-        public static async Task Registration(Form @this, Form open, string login, string password)
+        public static void Registration(Form @this, Form open, string login, string password)
         {
             using (SqlConnection connection = new SqlConnection(DataBase.ConnectionString))
             {
-                await connection.OpenAsync();
+                connection.Open();
                 DataBase dataBase = new DataBase();
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable table = new DataTable();
@@ -60,7 +60,7 @@ namespace CurrencyBank.Logic
                     MessageBox.Show("Извините такой пользователь уже есть!");
                 else if (!string.IsNullOrEmpty(login) && !string.IsNullOrEmpty(password))
                 {
-                    await commandInsertInto.ExecuteNonQueryAsync();
+                    commandInsertInto.ExecuteNonQueryAsync();
                     MessageBox.Show($"Вы успешно зарегестрированы как - {login}");
                     @this.Close();
                     open.Show();

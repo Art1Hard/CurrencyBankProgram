@@ -16,7 +16,7 @@ namespace CurrencyBank.UI
         private void regBtn_Click(object sender, EventArgs e)
         {
             Avtorization = new Avtorization();
-            User.Registration(this, Avtorization, loginRegTb.Text, passwordRegTb.Text).GetAwaiter();
+            User.Registration(this, Avtorization, loginRegTb.Text, passwordRegTb.Text);
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

@@ -21,8 +21,8 @@ namespace CurrencyBank.UI
 
         private void SignBtn_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            User.Avtorization(this, form, LoginSignTb.Text, passwordSignTb.Text).GetAwaiter();
+            CourseVal form = new CourseVal();
+            User.Avtorization(this, form, LoginSignTb.Text, passwordSignTb.Text);
         }
 
         private void Avtorization_Load(object sender, EventArgs e)
